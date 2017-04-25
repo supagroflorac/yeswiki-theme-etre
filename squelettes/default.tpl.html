@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="{{configuration param=" charset"}}">
+  <meta name="keywords" content="{{configuration param=" meta_keywords"}}">
+  <meta name="description" content="{{configuration param=" meta_description"}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+  {{linkstyle}}
+  {{linkrss}}
+</head>
+<body {{parambody}}>
+  <header>
+    <a class="header" href='?wiki=PagePrincipale'>
+      <img src="themes/etre/img/header.png" alt="Etres"/>
+    <a>
+    <a class="logoErasmus" href="https://info.erasmusplus.fr/">
+      <img src="themes/etre/img/logoErasmus.png" alt="Erasmus Logo"/>
+    </a>
+  </header>
+
+  <section id="main" role="main" {{doubleclic}}>
+    <div id="page">
+      {WIKINI_PAGE}
+      <a id="newsLink" href="?wiki=AllNews">All news</a>
+    </div>
+
+    <nav id="leftPanel">
+      <p id="hat">(Un) réseau européen pour la formation des acteurs en éducation
+        à l’environnement et au développement durable (EEDD) accompagnant
+        les dynamiques citoyennes de transition écologique
+      </p>
+      <div id="partnersMap">
+        <h2>Partners</h2>
+        <iframe class="partnersMap" src="http://umap.openstreetmap.fr/fr/map/etres_141881?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false"></iframe>
+      </div>
+      <a id="resourcesLink" href="?wiki=Resources">Resources</a>
+    </nav>
+  </section>
+
+  <footer>
+    <div id="contact">
+      <p>Question ?</p>
+      {{contact mail="marc.lansense@supagro.fr" template="contact-etre.tpl.html"}}
+    </div>
+    <div id="footerPartnersMap">
+      <h2>Partners</h2>
+      <iframe src="http://umap.openstreetmap.fr/fr/map/etres_141881?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false"></iframe>
+    </div>
+    <div id="legalsMentions">
+      <p><a href="?wiki=LegalsMentions">Legals mentions</a></p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png"/>
+      </a>
+      <p>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+          Creative Commons Attribution-ShareAlike 3.0 Unported License
+        </a>.
+      </p>
+    </div>
+  </footer>
+
+  {{linkjavascript}}
+  </body>
+</html>

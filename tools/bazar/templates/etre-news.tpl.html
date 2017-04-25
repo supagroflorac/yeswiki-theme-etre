@@ -1,0 +1,31 @@
+<?php
+
+if (count($fiches)>0) {
+    // TODO A supprimer uniquement pour test.
+    for ($i=0; $i < 2; $i++) {
+        array_push($fiches, $fiches[0]);
+    }
+  foreach ($fiches as $fiche) {
+
+    $newsTitle = $fiche['bf_titre'];
+    // TODO retravailler le format de la date
+    $newsDate = $fiche['date_maj_fiche'];
+    $newsHat = $fiche['bf_intro'];
+    // TODO Optimize the size and store in cache
+    $newsImage = 'files/' . $fiche['imagebf_image'];
+    $newsLink = $fiche['url'];
+    $newsLink = str_replace('/wakka.php', '', $newsLink);
+
+    echo "<article>
+        <h1>$newsTitle</h1>
+        <p class='date'>$newsDate</p>
+        <div class='newsHat' style='background-image: url($newsImage);'>
+            <p class='newsHat'>
+            $newsHat<br />
+            <a class='newsRead' href='$newsLink'>Read it...</a>
+            </p>
+        </div>
+    </article>
+    ";
+  }
+}

@@ -1,0 +1,307 @@
+$etre-grey: #666;
+$etre-blue: #004494;
+$etre-blue-light: #0077C8;
+$etre-yellow: #FFED00;
+$etre-font-size: 4vmin;
+$etre-padding: 4vmin;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+  box-sizing: border-box;
+}
+
+/** Adaptation des zones **/
+
+body {
+  display: flex;
+  flex-flow: column;
+}
+
+header {
+  display: flex;
+  flex-flow: column;
+}
+
+#leftPanel {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+
+#main {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+
+  #partnersMap, #hat {
+    display: none;
+  }
+}
+
+#page {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+
+footer {
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+
+  #legalsMentions {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width : 979px) {
+  #main {
+    flex-flow: row-reverse;
+
+    #leftPanel {
+      flex-basis: 33%;
+
+      #partnersMap, #hat {
+        display: flex;
+        flex-flow: column;
+        align-items: stretch;
+      }
+    }
+
+    #page {
+      flex-basis: 67%;
+    }
+  }
+
+  footer {
+    flex-flow: row-reverse;
+  }
+}
+
+
+/********************
+ ** Mise en forme
+********************/
+html {
+  background: linear-gradient($etre-blue, $etre-blue-light);
+}
+
+header, #hat, #legalsMentions, #contact, #newsLink
+{
+  padding: $etre-padding;
+}
+
+body {
+  background: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $etre-font-size;
+  max-width: 979px;
+  margin: auto;
+}
+
+header {
+  a.header {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  a.logoErasmus {
+    align-self: flex-end;
+    margin-top: $etre-padding;
+    width: 20%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  margin-bottom: $etre-padding;
+}
+
+#main {
+  margin: 0;
+  padding: 0;
+  margin-bottom: $etre-padding;
+
+  #page {
+    #newsLink {
+      background: $etre-blue-light;
+      color: white;
+      font-size: 150%;
+      font-weight: bold;
+      margin-top: $etre-padding;
+      margin-bottom: $etre-padding;
+      text-align: center;
+      text-decoration: underline;
+      vertical-align: middle;
+    }
+  }
+
+  #leftPanel {
+    #hat {
+      background: $etre-yellow;
+      color: $etre-blue;
+      font-weight: bold;
+      font-size: 125%;
+    }
+
+    #resourcesLink {
+      color: white;
+      text-align: center;
+      text-decoration: underline;
+      font-weight: bold;
+      vertical-align: middle;
+      background: $etre-blue url('../img/iconResources.png') no-repeat top left;
+      background-size: contain;
+      line-height: 300%;
+      font-size: 200%;
+    }
+  }
+}
+
+#partnersMap, #footerPartnersMap {
+  h2 {
+    color: $etre-blue-light;
+  }
+
+  iframe {
+    width: 100%;
+    height: 290px;
+    border: 0;
+  }
+}
+
+#partnersMap {
+  margin-bottom: $etre-padding;
+}
+
+footer {
+  font-size: 80%;
+  padding: 0;
+
+  #contact {
+    background: $etre-blue;
+    color: white;
+
+    p {
+      font-size: 120%;
+      font-weight: bold;
+      margin-bottom: $etre-padding;
+    }
+
+    input, textarea {
+      border-radius: 2vmin;
+      color: black;
+      width: 100%;
+      margin-bottom: $etre-padding;
+      padding: 1vmin;
+    }
+
+    button {
+      float: right;
+      font-size: 120%;
+      padding: $etre-padding;
+      background: $etre-blue-light;
+      border: 1 solid $etre-blue;
+      border-radius: 2vmin;
+    }
+  }
+
+  #legalsMentions {
+    text-align: center;
+    vertical-align: middle;
+    a {
+      text-decoration: underline;
+    }
+    p {
+      margin-bottom: 2em;
+    }
+  }
+}
+
+@media only screen and (min-width : 979px) {
+
+  body {
+    font-size: 16px;
+    padding-top: 14px;
+  }
+
+  header, #main {
+    padding: 0 40px;
+  }
+
+  footer {
+    padding: 40px;
+    background: $etre-blue;
+  }
+
+  #page {
+    margin-left: 20px;
+  }
+
+  #partnersMap {
+    display: flex;
+  }
+
+  #legalsMentions {
+    background-color: $etre-blue;
+    color: white;
+    a {
+      color: white;
+    }
+  }
+
+  #hat, #legalsMentions, #newsLink {
+    padding: 14px;
+  }
+
+  #contact {
+    padding: 0;
+  }
+
+  #newsLink {
+    margin-left: 33%;
+  }
+
+  #partnersMap, #hat {
+    display: inherit;
+  }
+
+  #footerPartnersMap {
+    display: none;
+  }
+}
+
+/** Mise en forme des articles page principale **/
+article {
+  display: flex;
+  flex-flow: column;
+
+  h1 {
+    color: $etre-blue;
+    font-weight: bold;
+    font-size: 200%;
+  }
+
+  p.date {
+    align-self: flex-end;
+    color:  $etre-blue;
+    font-size: 75%;
+    padding: 0 $etre-padding;
+  }
+
+  div.newsHat {
+    background-size: cover;
+    background-repeat: no-repeat;
+    p.newsHat {
+      margin-top: 24vmin;
+      margin-bottom: 0;
+      background-color: rgba(255, 255, 255, 0.65);
+    }
+  }
+}

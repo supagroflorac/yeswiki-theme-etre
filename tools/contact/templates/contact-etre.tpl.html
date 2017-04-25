@@ -1,0 +1,11 @@
+<form id="ajax-contact-form<?php echo $nbactionmail; ?>" class="<?php echo $class; ?>" action="<?php echo $mailerurl; ?>">
+  <input required type="text" name="name" placeholder="<?php echo _t('CONTACT_YOUR_NAME'); ?>" />
+  <input required type="email" name="email" placeholder="<?php echo _t('CONTACT_YOUR_MAIL'); ?>" />
+  <input required type="text" name="subject" placeholder="<?php echo _t('CONTACT_SUBJECT'); ?>" />
+  <textarea required name="message" placeholder="<?php echo _t('CONTACT_YOUR_MESSAGE'); ?>"></textarea>
+  <input type="hidden" name="nbactionmail" value="<?php echo $nbactionmail; ?>" />
+  <input type="hidden" name="entete" value="<?php echo $entete; ?>" />
+  <input type="hidden" name="type" value="contact" />
+
+  <button class="mail-submit" type="submit" name="submit"><?php echo _t('CONTACT_SEND_MESSAGE'); ?></button>
+</form>
