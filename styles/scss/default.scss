@@ -58,6 +58,10 @@ footer {
 }
 
 @media only screen and (min-width : 979px) {
+  header {
+    flex-flow: row;
+  }
+
   #main {
     flex-flow: row-reverse;
 
@@ -166,7 +170,15 @@ header {
 
 #partnersMap, #footerPartnersMap {
   h2 {
-    color: $etre-blue-light;
+    background-color: $etre-blue-light;
+    color: white;
+    width: 100%;
+    margin-bottom: 0;
+    line-height: 150%;
+    vertical-align: middle;
+    font-weight: bold;
+    padding-left: $etre-padding;
+
   }
 
   iframe {
@@ -202,14 +214,6 @@ footer {
       padding: 1vmin;
     }
 
-    button {
-      float: right;
-      font-size: 120%;
-      padding: $etre-padding;
-      background: $etre-blue-light;
-      border: 1 solid $etre-blue;
-      border-radius: 2vmin;
-    }
   }
 
   #legalsMentions {
@@ -303,5 +307,40 @@ article {
       margin-bottom: 0;
       background-color: rgba(255, 255, 255, 0.65);
     }
+    a.newsRead {
+      text-decoration: underline;
+    }
   }
+}
+
+@media only screen and (min-width : 979px) {
+  article {
+    flex-flow: row;
+    flex-wrap: wrap;
+    border: 1px solid $etre-blue;
+    margin-bottom: $etre-padding;
+
+    h1 {
+      padding: 0 $etre-padding;
+      font-size: 175%;
+    }
+
+    p.date {
+      width: 100%;
+      text-align: right;
+    }
+
+    div.newsHat {
+      background-size: 45% auto;
+      background-repeat: no-repeat;
+      padding: $etre-padding;
+      padding-top: 0;
+      p.newsHat {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 50%;
+      }
+    }
+  }
+
 }

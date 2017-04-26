@@ -1,10 +1,6 @@
 <?php
 
 if (count($fiches)>0) {
-    // TODO A supprimer uniquement pour test.
-    for ($i=0; $i < 2; $i++) {
-        array_push($fiches, $fiches[0]);
-    }
   foreach ($fiches as $fiche) {
 
     $newsTitle = $fiche['bf_titre'];
@@ -22,7 +18,7 @@ if (count($fiches)>0) {
         <div class='newsHat' style='background-image: url($newsImage);'>
             <p class='newsHat'>
             $newsHat<br />
-            <a class='newsRead' href='$newsLink'>Read it...</a>
+            <a class='newsRead' href='$newsLink'>Read the article</a>
             </p>
         </div>
     </article>
