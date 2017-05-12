@@ -133,6 +133,7 @@ header {
   margin-bottom: $etre-padding;
 
   #page {
+    padding: $etre-padding;
     #newsLink {
       background: $etre-blue-light;
       color: white;
@@ -152,6 +153,17 @@ header {
       color: $etre-blue;
       font-weight: bold;
       font-size: 125%;
+      a.plus {
+        font-size: 150%;
+        background: $etre-blue-light;
+        color: $etre-yellow;
+        padding: 0.1em 0.5em;
+        margin: 0.2em 0 0 auto;
+        border-radius: 50%;
+      }
+      a.plus:hover {
+        text-decoration: none;
+      }
     }
 
     #resourcesLink {
