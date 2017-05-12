@@ -161,6 +161,12 @@ header {
       font-weight: bold;
     }
 
+    p.date {
+      font-size: 75%;
+      color: $etre-blue;
+      text-align: right;
+    }
+
     h1 {
       color: $etre-blue;
       font-weight: bolder;
