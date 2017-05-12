@@ -34,7 +34,7 @@ header {
   flex-flow: column;
   align-items: stretch;
 
-  #partnersMap, #hat {
+  #partnersMap, #hat, #flags {
     display: none;
   }
 }
@@ -72,6 +72,13 @@ footer {
         display: flex;
         flex-flow: column;
         align-items: stretch;
+      }
+
+      #flags {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+        justify-content: space-between;
       }
     }
 
@@ -164,6 +171,10 @@ header {
       a.plus:hover {
         text-decoration: none;
       }
+    }
+
+    #flags {
+      margin-top: calc(#{$etre-padding} / 2);
     }
 
     #resourcesLink {

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="{{configuration param=" charset"}}">
+  <meta name="keywords" content="{{configuration param=" meta_keywords"}}">
+  <meta name="description" content="{{configuration param=" meta_description"}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+  {{linkstyle}}
+  {{linkrss}}
+</head>
+<body {{parambody}}>
+  <header>
+    <a class="header" href='?wiki=PagePrincipale'>
+      <img src="themes/etres/img/header.png" alt="Etres"/>
+    <a>
+    <a class="logoErasmus" href="https://info.erasmusplus.fr/">
+      <img src="themes/etres/img/logoErasmus.png" alt="Erasmus Logo"/>
+    </a>
+  </header>
+
+  <section id="main" role="main" {{doubleclic}}>
+    <div id="page">
+      {WIKINI_PAGE}
+      <a id="newsLink" href="?wiki=AllNews">{{trad ref="allNews"}}</a>
+    </div>
+
+    <nav id="leftPanel">
+      <p id="hat">{{trad ref="hat"}}
+      </p>
+      <div id='flags'>
+        <a href="?wiki=PagePrincipaleEl"><img src='themes/etres/img/elFlag.png' alt='el'></a>
+        <a href="?wiki=PagePrincipaleEn"><img src='themes/etres/img/enFlag.png' alt='en'></a>
+        <a href="?wiki=PagePrincipaleEs"><img src='themes/etres/img/esFlag.png' alt='es'></a>
+        <a href="?wiki=PagePrincipaleFr"><img src='themes/etres/img/frFlag.png' alt='fr'></a>
+        <a href="?wiki=PagePrincipaleIt"><img src='themes/etres/img/itFlag.png' alt='it'></a>
+      </div>
+      <div id="partnersMap">
+        <h2>{{trad ref="partners"}}</h2>
+        <iframe class="partnersMap" src="http://umap.openstreetmap.fr/fr/map/etres_141881?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false#3/44.15/7.73"></iframe>
+      </div>
+      <a id="resourcesLink" href="?wiki=Resources">{{trad ref="resources"}}</a>
+    </nav>
+  </section>
+
+  <footer>
+    <div id="contact">
+      <p>{{trad ref="question"}}</p>
+      {{contact mail="marc.lansense@supagro.fr" template="contact-etre.tpl.html"}}
+    </div>
+    <div id="footerPartnersMap">
+      <h2>{{trad ref="partners"}}</h2>
+      <iframe src="http://umap.openstreetmap.fr/fr/map/etres_141881?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false#3/44.15/7.73"></iframe>
+    </div>
+    <div id="legalsMentions">
+      <p><a href="?wiki=LegalsMentions">Legals mentions</a></p>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png"/>
+      </a>
+      <p>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+          Creative Commons Attribution-ShareAlike 3.0 Unported License
+        </a>.
+      </p>
+    </div>
+  </footer>
+
+  {{linkjavascript}}
+  </body>
+</html>
