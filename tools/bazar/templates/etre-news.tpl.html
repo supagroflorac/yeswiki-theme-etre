@@ -1,6 +1,9 @@
 <?php
 
 if (count($fiches)>0) {
+    echo $info_res;
+    echo $pager_links;
+
   foreach ($fiches as $fiche) {
 
     $newsTitle = $fiche['bf_titre'];
@@ -13,7 +16,7 @@ if (count($fiches)>0) {
     $newsLink = str_replace('/wakka.php', '', $newsLink);
 
     echo "<article>
-        <h1>$newsTitle</h1>
+        <a href='$newsLink'><h1>$newsTitle</h1></a>
         <p class='date'>$newsDate</p>
         <div class='newsHat' style='background-image: url($newsImage);'>
             <p class='newsHat'>
@@ -24,4 +27,6 @@ if (count($fiches)>0) {
     </article>
     ";
   }
+
+  echo $pager_links;
 }
