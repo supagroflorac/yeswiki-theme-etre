@@ -1,11 +1,24 @@
+<?php
+  include_once('tools/etres-lang/includes/etres-lang.func.php');
+
+  $defaultLang = 'en';
+
+  $lang = getLang();
+  $file = "tools/etres-lang/lang/$defaultLang.php";
+  if (file_exists("tools/etres-lang/lang/$lang.php")) {
+      $file = "tools/etres-lang/lang/$lang.php";
+  }
+  include($file);
+?>
+
 <form id="ajax-contact-form<?php echo $nbactionmail; ?>" class="<?php echo $class; ?>" action="<?php echo $mailerurl; ?>">
-  <input required type="text" name="name" placeholder="<?php echo _t('CONTACT_YOUR_NAME'); ?>" />
-  <input required type="email" name="email" placeholder="<?php echo _t('CONTACT_YOUR_MAIL'); ?>" />
-  <input required type="text" name="subject" placeholder="<?php echo _t('CONTACT_SUBJECT'); ?>" />
-  <textarea required name="message" placeholder="<?php echo _t('CONTACT_YOUR_MESSAGE'); ?>"></textarea>
+  <input required type="text" name="name" placeholder="<?php echo $etresTraductions['yourName']; ?>" />
+  <input required type="email" name="email" placeholder="<?php echo $etresTraductions['email']; ?>" />
+  <input required type="text" name="subject" placeholder="<?php echo $etresTraductions['mailSubject']; ?>" />
+  <textarea required name="message" placeholder="<?php echo $etresTraductions['mailMessage']; ?>"></textarea>
   <input type="hidden" name="nbactionmail" value="<?php echo $nbactionmail; ?>" />
   <input type="hidden" name="entete" value="<?php echo $entete; ?>" />
   <input type="hidden" name="type" value="contact" />
 
-  <button class="mail-submit" type="submit" name="submit"><?php echo _t('CONTACT_SEND_MESSAGE'); ?></button>
+  <button class="mail-submit" type="submit" name="submit"><?php echo $etresTraductions['send']; ?></button>
 </form>
