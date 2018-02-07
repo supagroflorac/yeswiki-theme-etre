@@ -1,24 +1,27 @@
 <?php
-  include_once('tools/etres-lang/includes/etres-lang.func.php');
+  include_once('tools/multilang/includes/multilang.func.php');
 
   $defaultLang = 'en';
 
   $lang = getLang();
-  $file = "tools/etres-lang/lang/$defaultLang.php";
-  if (file_exists("tools/etres-lang/lang/$lang.php")) {
-      $file = "tools/etres-lang/lang/$lang.php";
+
+
+  $langFilespath = 'themes/etres/lang/';
+  $file = "$langFilespath$defaultLang.php";
+  if (file_exists("$langFilespath$lang.php")) {
+      $file = "$langFilespath$lang.php";
   }
   include($file);
 ?>
 
 <form id="ajax-contact-form<?php echo $nbactionmail; ?>" class="<?php echo $class; ?>" action="<?php echo $mailerurl; ?>">
-  <input required type="text" name="name" placeholder="<?php echo $etresTraductions['yourName']; ?>" />
-  <input required type="email" name="email" placeholder="<?php echo $etresTraductions['email']; ?>" />
-  <input required type="text" name="subject" placeholder="<?php echo $etresTraductions['mailSubject']; ?>" />
-  <textarea required name="message" placeholder="<?php echo $etresTraductions['mailMessage']; ?>"></textarea>
+  <input required type="text" name="name" placeholder="<?php echo $translations['yourName']; ?>" />
+  <input required type="email" name="email" placeholder="<?php echo $translations['email']; ?>" />
+  <input required type="text" name="subject" placeholder="<?php echo $translations['mailSubject']; ?>" />
+  <textarea required name="message" placeholder="<?php echo $translations['mailMessage']; ?>"></textarea>
   <input type="hidden" name="nbactionmail" value="<?php echo $nbactionmail; ?>" />
   <input type="hidden" name="entete" value="<?php echo $entete; ?>" />
   <input type="hidden" name="type" value="contact" />
 
-  <button class="mail-submit" type="submit" name="submit"><?php echo $etresTraductions['send']; ?></button>
+  <button class="mail-submit" type="submit" name="submit"><?php echo $translations['send']; ?></button>
 </form>
