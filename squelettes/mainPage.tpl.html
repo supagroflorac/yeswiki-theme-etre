@@ -10,7 +10,7 @@
 </head>
 <body {{parambody}}>
   <header>
-    <a class="header" href='?wiki=PagePrincipale'>
+    <a class="header" href='?PagePrincipale'>
       <img src="themes/etres/img/header.png" alt="Etres"/>
     </a>
     <a class="logoErasmus" href="https://info.erasmusplus.fr/">
@@ -21,19 +21,21 @@
   <section id="main" role="main" {{doubleclic}}>
     <div id="page">
       {WIKINI_PAGE}
-      <!--<a id="newsLink" href="?wiki=AllNews">{{translate ref="allNews"}}</a>-->
+      <a id="newsLink" href="?wiki=AllNews">{{translate ref="allNews"}}</a>
     </div>
 
     <nav id="leftPanel">
-      <p id="hat">{{translate ref="hat"}}
+      <p id="hat">
+        {{translate ref="hat"}}
+        <a class="plus" href="?wiki=Introduction">+</a>
       </p>
-      <div id='flags'>
-        <a href="../el/"><img src='themes/etres/img/elFlag.png' alt='el'></a>
-        <a href="../en/"><img src='themes/etres/img/enFlag.png' alt='en'></a>
-        <a href="../es"><img src='themes/etres/img/esFlag.png' alt='es'></a>
-        <a href="../fr"><img src='themes/etres/img/frFlag.png' alt='fr'></a>
-        <a href="../it"><img src='themes/etres/img/itFlag.png' alt='it'></a>
-      </div>
+      <!--<div id='flags'>
+        <a href="?PagePrincipaleEl"><img src='themes/etres/img/elFlag.png' alt='el'></a>
+        <a href="?PagePrincipaleEn"><img src='themes/etres/img/enFlag.png' alt='en'></a>
+        <a href="?PagePrincipaleEs"><img src='themes/etres/img/esFlag.png' alt='es'></a>
+        <a href="?PagePrincipaleFr"><img src='themes/etres/img/frFlag.png' alt='fr'></a>
+        <a href="?PagePrincipaleIt"><img src='themes/etres/img/itFlag.png' alt='it'></a>
+      </div>-->
       <div id="partnersMap">
         <h2>{{translate ref="partners"}}</h2>
         <iframe class="partnersMap" src="https://umap.openstreetmap.fr/fr/map/etres_141881?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=false&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false#3/44.15/7.73" scrolling="no"></iframe>

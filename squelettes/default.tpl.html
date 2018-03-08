@@ -10,7 +10,7 @@
 </head>
 <body {{parambody}}>
   <header>
-    <a class="header" href='?wiki=PagePrincipale'>
+    <a class="header" href='?PagePrincipale'>
       <img src="themes/etres/img/header.png" alt="Etres"/>
     </a>
     <a class="logoErasmus" href="https://info.erasmusplus.fr/">
@@ -21,15 +21,16 @@
   <section id="main" role="main" {{doubleclic}}>
     <div id="page">
       {WIKINI_PAGE}
-      <a id="newsLink" href="?wiki=AllNews">{{translate ref="allNews"}}</a>
     </div>
 
     <nav id="leftPanel">
-      <p id="hat">{{translate ref="hat"}}
+      <p id="hat">
+        {{translate ref="hat"}}
+        <a class="plus" href="?wiki=Introduction">+</a>
       </p>
       <div id="partnersMap">
         <h2>{{translate ref="partners"}}</h2>
-        <iframe class="partnersMap" src="https://umap.openstreetmap.fr/fr/map/etres_141881?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=false&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false#3/44.15/7.73"  scrolling="no"></iframe>
+        <iframe class="partnersMap" src="https://umap.openstreetmap.fr/fr/map/etres_141881?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=false&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false#3/44.15/7.73" scrolling="no"></iframe>
       </div>
       <a id="resourcesLink" href="?wiki=Resources">{{translate ref="resources"}}</a>
     </nav>
