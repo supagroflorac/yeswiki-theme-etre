@@ -14,7 +14,7 @@
   include($file);
 ?>
 
-<form id="ajax-contact-form<?php echo $nbactionmail; ?>" class="<?php echo $class; ?>" action="<?php echo $mailerurl; ?>">
+<form id="ajax-contact-form<?php echo $nbactionmail; ?>" class="ajax-mail-form <?php echo $class; ?>" action="<?php echo $mailerurl; ?>">
   <input required type="text" name="name" placeholder="<?php echo $translations['yourName']; ?>" />
   <input required type="email" name="email" placeholder="<?php echo $translations['email']; ?>" />
   <input required type="text" name="subject" placeholder="<?php echo $translations['mailSubject']; ?>" />
