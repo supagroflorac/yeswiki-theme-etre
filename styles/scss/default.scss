@@ -46,15 +46,8 @@ header {
 }
 
 footer {
-  display: flex;
-  flex-flow: column;
-  align-items: stretch;
-
-  #legalsMentions {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-  }
+  background: $etre-blue;
+  padding: $etre-padding;
 }
 
 @media only screen and (min-width : 979px) {
@@ -85,10 +78,6 @@ footer {
     #page {
       flex-basis: 67%;
     }
-  }
-
-  footer {
-    flex-flow: row-reverse;
   }
 }
 
@@ -235,48 +224,17 @@ header {
 }
 
 footer {
+  color: white;
   font-size: 80%;
-  padding: 0;
+  //padding: 0;
 
-  #contact {
-    background: $etre-blue;
+  a {
     color: white;
-
-    p {
-      font-size: 120%;
-      font-weight: bold;
-      margin-bottom: $etre-padding;
-    }
-
-    input, textarea {
-      border-radius: 2vmin;
-      color: black;
-      width: 100%;
-      margin-bottom: $etre-padding;
-      padding: 1vmin;
-    }
-
-    button {
-      background: $etre-blue-light;
-      border: 1px solid white;
-      color: white;
-      font-size: 200%;
-      text-align: center;
-      width: 30%;
-      margin-left: 70%;
-    }
-
+    text-decoration: underline;
   }
 
-  #legalsMentions {
+  div.row:first-child {
     text-align: center;
-    vertical-align: middle;
-    a {
-      text-decoration: underline;
-    }
-    p {
-      margin-bottom: 2em;
-    }
   }
 }
 
