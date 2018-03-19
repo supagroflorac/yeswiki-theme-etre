@@ -15,13 +15,32 @@
 ?>
 
 <form id="ajax-contact-form<?php echo $nbactionmail; ?>" class="ajax-mail-form <?php echo $class; ?>" action="<?php echo $mailerurl; ?>">
-  <input required type="text" name="name" placeholder="<?php echo $translations['yourName']; ?>" />
-  <input required type="email" name="email" placeholder="<?php echo $translations['email']; ?>" />
-  <input required type="text" name="subject" placeholder="<?php echo $translations['mailSubject']; ?>" />
-  <textarea required name="message" placeholder="<?php echo $translations['mailMessage']; ?>"></textarea>
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+      <input required class="form-control" type="text" name="name" placeholder="<?php echo $translations['yourName']; ?>" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input required class="form-control" type="email" name="email" placeholder="<?php echo $translations['email']; ?>" />
+    </div>
+  </div>
+
+  <div class="form-group">
+      <input required class="form-control contact-subject" type="text" name="subject" placeholder="<?php echo $translations['mailSubject']; ?>" />
+  </div>
+
+  <div class="form-group">
+    <textarea required rows="8" class="form-control contact-message" name="message" placeholder="<?php echo $translations['mailMessage']; ?>"></textarea>
+  </div>
+
+  <div class="form-group">
+    <button class="btn btn-primary btn-block mail-submit" type="submit" name="submit"><i class="icon-envelope icon-white"></i>&nbsp;<?php echo $translations['send']; ?></button>
+  </div>
   <input type="hidden" name="nbactionmail" value="<?php echo $nbactionmail; ?>" />
   <input type="hidden" name="entete" value="<?php echo $entete; ?>" />
   <input type="hidden" name="type" value="contact" />
-
-  <button class="mail-submit" type="submit" name="submit"><?php echo $translations['send']; ?></button>
 </form>
