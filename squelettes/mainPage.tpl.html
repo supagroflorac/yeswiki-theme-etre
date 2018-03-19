@@ -45,25 +45,7 @@
   </section>
 
   <footer>
-    <div id="contact">
-      <p>{{translate ref="question"}}</p>
-      {{contact mail="contact@etreserasmus.eu" template="contact-etre.tpl.html"}}
-    </div>
-    <div id="footerPartnersMap">
-      <h2>{{translate ref="partners"}}</h2>
-      <iframe src="http://umap.openstreetmap.fr/fr/map/etres_141881?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=false&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false#3/44.15/7.73" scrolling="no"></iframe>
-    </div>
-    <div id="legalsMentions">
-      <p><a href="?wiki=LegalsMentions">Legals mentions</a></p>
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
-        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png"/>
-      </a>
-      <p>This work is licensed under a
-        <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
-          Creative Commons Attribution-ShareAlike 3.0 Unported License
-        </a>.
-      </p>
-    </div>
+    {{include page="PageFooter"}}
   </footer>
 
   {{linkjavascript}}
