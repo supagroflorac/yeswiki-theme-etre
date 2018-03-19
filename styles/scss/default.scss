@@ -45,11 +45,14 @@ header {
   align-items: stretch;
 }
 
+<<<<<<< HEAD
 footer {
   background: $etre-blue;
   padding: $etre-padding;
 }
 
+=======
+>>>>>>> 542a9137037ee09ff35bada77d2ec0625f39a7f0
 @media only screen and (min-width : 979px) {
   header {
     flex-flow: row;
