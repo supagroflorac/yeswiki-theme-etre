@@ -155,6 +155,15 @@ header {
       background: $etre-blue-light;
       width: 100%;
       padding: 0.25em 1em;
+      margin-bottom: 1em;
+    }
+
+    .btn-etres:hover {
+      background: $etre-blue;
+    }
+
+    .btn-etres-actu {
+      text-align: right;
     }
 
     img {
