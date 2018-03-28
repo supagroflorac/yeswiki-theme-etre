@@ -8,7 +8,7 @@ if (count($fiches)>0) {
 
     $newsTitle = $fiche['bf_titre'];
     // TODO retravailler le format de la date
-    $newsDate = $fiche['date_maj_fiche'];
+    $newsDate = $fiche['date_creation_fiche'];
     $newsHat = $fiche['bf_intro'];
     // TODO Optimize the size and store in cache
     $newsImage = 'files/' . $fiche['imagebf_image'];
