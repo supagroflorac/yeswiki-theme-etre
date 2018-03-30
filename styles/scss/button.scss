@@ -1,0 +1,30 @@
+.btn-etres {
+  font-size: 1.1em;
+  font-weight: $semiBold;
+  line-height: 3em;
+  text-align: left;
+  background: $etre-blue-light;
+  color: white;
+  width: 100%;
+  padding: 0.25em 1em;
+  margin-bottom: calc(#{$etre-padding}/2);
+  text-decoration: none;
+}
+
+.btn-etres:hover {
+  background: $etre-blue;
+}
+
+.btn-etres-actu {
+  text-align: left;
+}
+
+@media only screen and (min-width : $minWidth) {
+  .btn-etres {
+    font-size: 1.5em;
+  }
+
+  .btn-etres-actu {
+    text-align: right;
+  }
+}

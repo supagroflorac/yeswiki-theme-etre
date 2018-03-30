@@ -18,19 +18,19 @@
       <aside id="hat">
         <p>
           {{translate ref="hat"}}
-          <a class="plus" href="?wiki=Introduction">+</a>
         </p>
+        <a class="plus" href="?wiki=Introduction">+</a>
       </aside>
       <aside id="partnersMap">
         <h2>{{translate ref="partners"}}</h2>
         <iframe class="partnersMap" src="https://umap.openstreetmap.fr/fr/map/etres_141881?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=false&allowEdit=false&moreControl=false&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=false&onLoadPanel=undefined&captionBar=false#3/44.15/7.73" scrolling="no"></iframe>
       </aside>
-      <a id="resourcesLink" href="?Ressources">{{translate ref="resources"}}</a>
+      <a id="newsLink" class="btn btn-primary btn-etres" href="?Actualites">{{translate ref="news"}}</a>
     </section>
   </section>
 
-  <header>
-    <a class="header" href='?PagePrincipale'>
+  <header id='header'>
+    <a class="logo" href='?PagePrincipale'>
       <img src="themes/etres/img/header.png" alt="Etres"/>
     </a>
     <a class="logoErasmus" href="https://info.erasmusplus.fr/">
@@ -38,7 +38,7 @@
     </a>
   </header>
 
-  <footer>
+  <footer id='footer'>
     {{include page="PageFooter"}}
   </footer>
 

@@ -1,5 +1,6 @@
 @import 'vars';
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import 'text';
+@import 'button';
 
 * {
   box-sizing: border-box;
@@ -33,6 +34,7 @@ header {
   display: flex;
   flex-flow: column;
   align-items: stretch;
+  padding: 0 1em;
 }
 
 #main {
@@ -51,42 +53,41 @@ header {
   align-items: stretch;
 }
 
-footer {
+#footer {
   background: $etre-blue;
   padding: $etre-padding;
 }
 
-@media only screen and (min-width : 979px) {
-  header {
+@media only screen and (min-width : $minWidth) {
+
+  #page {
+    flex-basis: 67%;
+    padding-right: 0 !important;
+  }
+
+  #header {
     flex-flow: row;
+  }
+
+  #leftPanel {
+    padding: 0;
+    flex-basis: 33%;
+  }
+
+  #leftPanel #hat, #leftPanel #partnersMap {
+    display: inherit;
   }
 
   #main {
     flex-flow: row-reverse;
+  }
 
-    #leftPanel {
-      flex-basis: 33%;
-
-      #partnersMap, #hat {
-        display: flex;
-        flex-flow: column;
-        align-items: stretch;
-      }
-
-      #flags {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: stretch;
-        justify-content: space-between;
-      }
-    }
-
-    #page {
-      flex-basis: 67%;
-    }
+  #partnersMap, #hat {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
   }
 }
-
 
 /********************
  ** Mise en forme
@@ -95,36 +96,27 @@ html {
   background: linear-gradient($etre-blue, $etre-blue-light);
 }
 
-header, #hat, #legalsMentions, #contact, #newsLink
-{
-  padding: $etre-padding;
-}
-
 body {
   background: white;
-  font-family: 'Open Sans', sans-serif;
-  font-size: $etre-font-size;
-  max-width: 979px;
+  max-width: $minWidth;
   margin: auto;
 }
 
-header {
-  a.header {
+#header {
+  padding: $etre-padding;
+  a.logo {
     width: 100%;
-    img {
-      width: 100%;
-      height: auto;
-    }
   }
 
   a.logoErasmus {
     align-self: flex-end;
     margin-top: $etre-padding;
     width: 20%;
-    img {
-      width: 100%;
-      height: auto;
-    }
+  }
+
+  a img {
+    width: 100%;
+    height: auto;
   }
   margin-bottom: $etre-padding;
 }
@@ -133,262 +125,113 @@ header {
   margin: 0;
   padding: 0;
   margin-bottom: $etre-padding;
+}
 
-  #page {
-    padding: 0 $etre-padding;
-    #newsLink {
-      background: $etre-blue-light;
-      color: white;
-      font-size: 150%;
-      font-weight: bold;
-      margin-top: $etre-padding;
-      margin-bottom: $etre-padding;
-      text-align: center;
-      text-decoration: underline;
-      vertical-align: middle;
-    }
+#page {
+  padding: 0 $etre-padding;
 
-    .btn-etres {
-      font-size: 1.5em;
-      line-height: 3em;
-      text-align: left;
-      background: $etre-blue-light;
-      width: 100%;
-      padding: 0.25em 1em;
-      margin-bottom: 1em;
-    }
-
-    .btn-etres:hover {
-      background: $etre-blue;
-    }
-
-    .btn-etres-actu {
-      text-align: right;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    p.hat {
-      font-weight: bold;
-    }
-
-    p.date {
-      font-size: 75%;
-      color: $etre-blue;
-      text-align: right;
-    }
-
-    h1 {
-      color: $etre-blue;
-      font-weight: bolder;
-    }
+  img {
+    max-width: 100%;
   }
 
-  #leftPanel {
-    #hat {
-      background: $etre-yellow;
-      color: $etre-blue;
-      font-weight: bold;
-      font-size: 125%;
-      a.plus {
-        font-size: 150%;
-        background: $etre-blue-light;
-        color: $etre-yellow;
-        padding: 0.1em 0.5em;
-        margin: 0.2em 0 0 auto;
-        border-radius: 50%;
-      }
-      a.plus:hover {
-        text-decoration: none;
-      }
-    }
+  p.hat {
+    font-weight: bold;
+  }
 
-    #flags {
-      margin-top: calc(#{$etre-padding} / 2);
-    }
+  p.date {
+    font-size: 75%;
+    color: $etre-blue;
+    text-align: right;
+  }
 
-    #resourcesLink {
-      color: white;
-      text-align: center;
-      text-decoration: underline;
-      font-weight: bold;
-      vertical-align: middle;
-      background: $etre-blue url('../img/iconResources.png') no-repeat top left;
-      background-size: contain;
-      line-height: 300%;
-      font-size: 200%;
-    }
+  h1 {
+    color: $etre-blue;
+    font-weight: bolder;
   }
 }
 
-#partnersMap, #footerPartnersMap {
-  h2 {
-    background-color: $etre-blue-light;
-    color: white;
-    width: 100%;
-    margin-bottom: 0;
-    line-height: 150%;
-    vertical-align: middle;
-    font-weight: bold;
-    padding-left: $etre-padding;
-
+#leftPanel {
+  a.plus:hover {
+    text-decoration: none;
+    background: $etre-blue;
   }
+}
 
-  iframe {
-    width: 100%;
-    height: 290px;
-    border: 0;
+#hat {
+  background: $etre-yellow;
+  color: $etre-blue;
+  font-weight: $bold;
+  font-size: 1.25em;
+  padding: calc(#{$etre-padding} / 2);
+  margin-bottom: calc(#{$etre-padding}/2);
+
+  a.plus {
+    font-size: 1.5em;
+    background: $etre-blue-light;
+    color: $etre-yellow;
+    padding: 0.1em 0.5em 0.25em 0.5em;
+    border-radius: 50%;
+    text-decoration: none;
+    align-self: flex-end;
   }
 }
 
 #partnersMap {
   margin-bottom: $etre-padding;
+
+  h2 {
+    background-color: $etre-blue-light;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0;
+    line-height: 3em;
+    padding: 0.25em 1em;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  iframe {
+    width: 100%;
+    height: calc(#{$etre-padding} * 8);
+    border: 0;
+  }
 }
 
-footer {
+#footer {
   color: white;
-  font-size: 80%;
-  //padding: 0;
+  padding-bottom: $etre-padding;
 
-  a {
-    color: white;
-    text-decoration: underline;
-  }
-
-  div.row:first-child {
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width : 979px) {
-
-  body {
-    font-size: 16px;
-    padding-top: 14px;
-  }
-
-  header, #main {
-    padding: 0 40px;
-  }
-
-  footer {
-    padding: 40px;
-    background: $etre-blue;
-  }
-
-  #page {
-    margin-left: 20px;
-    padding-right: 0;
-  }
-
-  #partnersMap {
-    display: flex;
-  }
-
-  #legalsMentions {
-    background-color: $etre-blue;
-    color: white;
+  div.include {
+    font-size: 0.8em;
     a {
       color: white;
+      text-decoration: underline;
     }
-  }
 
-  #hat, #legalsMentions, #newsLink {
-    padding: 14px;
-  }
+    a:hover {
+      color: $etre-yellow;
+    }
 
-  #contact {
-    padding: 0;
-  }
-
-  #newsLink {
-    margin-left: 33%;
-  }
-
-  #partnersMap, #hat {
-    display: inherit;
-  }
-
-  #footerPartnersMap {
-    display: none;
+    div.row:first-child {
+      text-align: center;
+    }
   }
 }
 
-/** Mise en forme des articles page principale **/
-.page > article {
-  display: flex;
-  flex-flow: column;
-
-  h1 {
-    color: $etre-blue;
-    font-weight: bold;
-    font-size: 200%;
+@media only screen and (min-width : $minWidth) {
+  body {
+    padding-top: $etre-padding;
   }
 
-  p.date {
-    align-self: flex-end;
-    color:  $etre-blue;
-    font-size: 75%;
+  #header, #main, #footer {
     padding: 0 $etre-padding;
   }
 
-  div.newsHat {
-    background-size: cover;
-    background-repeat: no-repeat;
-    p.newsHat {
-      margin-top: 24vmin;
-      margin-bottom: 0;
-      background-color: rgba(255, 255, 255, 0.65);
-    }
-    a.newsRead {
-      text-decoration: underline;
-    }
-  }
-}
-
-@media only screen and (min-width : 979px) {
-
-  #page {
-    padding-right: 0 !important;
-  }
-
-  .page > article {
-    flex-flow: row;
-    flex-wrap: wrap;
-    border: 1px solid $etre-blue;
-    margin-bottom: $etre-padding;
+  #footer {
+    background: $etre-blue;
     padding-bottom: $etre-padding;
-
-    h1 {
-      padding: 0 0.5em;
-      font-size: 175%;
-    }
-
-    p.date {
-      width: 100%;
-      text-align: right;
-    }
-
-    div.newsHat {
-      background-size: 40% auto;
-      background-repeat: no-repeat;
-      padding: 0;
-      p.newsHat {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-left: $etre-padding;
-        margin-left: 40%;
-        width: 60%;
-        min-height: 6em;
-
-        a.newsRead {
-          margin-right: 0;
-          margin-left: 50%;
-        }
-      }
-    }
   }
-
 }
+
+@import 'articles';

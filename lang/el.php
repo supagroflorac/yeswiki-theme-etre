@@ -12,4 +12,5 @@ $translations = array(
     'mailMessage' => 'Το μήνυμα σας',
     'send' => 'Αποστολή',
     'question' => 'Ερώτηση ;',
+    'news' => 'ειδήσεις',
 );
