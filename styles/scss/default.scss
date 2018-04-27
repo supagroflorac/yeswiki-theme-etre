@@ -180,18 +180,6 @@ body {
 #partnersMap {
   margin-bottom: $etre-padding;
 
-  h2 {
-    background-color: $etre-blue-light;
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 0;
-    line-height: 3em;
-    padding: 0.25em 1em;
-    vertical-align: middle;
-    width: 100%;
-  }
-
   iframe {
     width: 100%;
     height: calc(#{$etre-padding} * 8);
