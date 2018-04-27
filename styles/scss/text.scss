@@ -55,6 +55,14 @@ a:visited {
   //color: $etre-blue;
 }
 
+.tradLink {
+  background: $etre-blue-light;
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+
+}
+
 @media only screen and (min-width : $minWidth) {
   body {
     font-size: 1.6em;

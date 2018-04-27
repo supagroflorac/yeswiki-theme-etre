@@ -19,9 +19,29 @@
   text-align: left;
 }
 
+.tradLink {
+  background: $etre-blue-light;
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.tradLink::before {
+  content:"✎";
+  color: white;
+  font-size: 1.3em;
+}
+
+.tradLink:hover {
+  text-decoration: none;
+  color: white;
+  background: $etre-blue;
+}
+
 @media only screen and (min-width : $minWidth) {
   .btn-etres {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .btn-etres-actu {
