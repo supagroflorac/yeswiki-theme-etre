@@ -1,0 +1,12 @@
+.flaglist {
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  width: 100%;
+  .selected {
+    transform: scale(1.5);
+  }
+}
