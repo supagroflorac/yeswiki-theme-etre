@@ -93,11 +93,14 @@ header {
  ** Mise en forme
 ********************/
 html {
-  background: linear-gradient($etre-blue, $etre-blue-light);
+  //background: linear-gradient($etre-blue, $etre-blue-light);
+  background: url("../img/fond-etres.png") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body {
-  background: white;
+  background: transparent;
   max-width: $minWidth;
   margin: auto;
 }
@@ -130,6 +133,7 @@ body {
 #page {
   padding: 0 $etre-padding;
   max-width: 613px;
+  background: rgba(255, 255, 255, 0.6);
 
   img {
     max-width: 100%;
