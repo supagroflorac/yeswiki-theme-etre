@@ -212,7 +212,7 @@ body {
   }
 }
 
-@media only screen and (min-width : $minWidth) {
+@media screen and (max-width : $minWidth) {
   body {
     padding-top: $etre-padding;
   }
@@ -224,6 +224,13 @@ body {
   #footer {
     background: $etre-blue;
     padding-bottom: $etre-padding;
+  }
+}
+
+@media screen and (max-width : $minWidth) {
+  #page, #leftPanel {
+    max-width: 100%;
+    padding: 0;
   }
 }
 

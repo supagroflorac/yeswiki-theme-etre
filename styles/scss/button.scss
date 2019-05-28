@@ -9,6 +9,9 @@
   padding: 0.25em 1em;
   margin-bottom: calc(#{$etre-padding}/2);
   text-decoration: none;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .btn-etres:hover {
@@ -48,12 +51,15 @@
   background: $etre-blue;
 }
 
-@media only screen and (min-width : $minWidth) {
+@media only screen and (max-width : $minWidth) {
   .btn-etres {
     font-size: 1.2em;
+    text-align: center;
   }
 
   .btn-etres-actu {
     text-align: right;
   }
+
+
 }
