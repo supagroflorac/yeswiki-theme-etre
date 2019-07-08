@@ -55,12 +55,17 @@ a:visited {
   //color: $etre-blue;
 }
 
+hr {
+  border: 0;
+  height: 5px;
+  background: $etre-yellow url("../img/hr.svg") repeat-y top left;
+}
+
 .tradLink {
   background: $etre-blue-light;
   padding: 0.5em 1em;
   color: white;
   text-decoration: none;
-
 }
 
 @media only screen and (min-width : $minWidth) {
