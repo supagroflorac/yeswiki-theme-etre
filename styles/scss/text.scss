@@ -12,47 +12,48 @@ body {
 }
 
 h1 {
-  color: $etre-blue;
-  font-size: 1.87em;
+  color: #333;
+  font-size: 2em;
   font-weight: $semiBold;
 }
 
 h2 {
-  //color: $mainYellow;
+  color: $etre-blue;
   font-size: 1.75em;
   font-weight: $semiBold;
 }
 
 h3 {
-  //color: $secondBlue;
-  font-size: 1.66em;
+  color: $etre-blue-light;
+  font-size: 1.50em;
   font-weight: $semiBold;
 }
 
 h4 {
-  //color: $secondOrange;
-  font-size: 1.54em;
+  color: $etre-grey;
+  font-size: 1.25em;
   font-weight: $semiBold;
 }
 
 h5 {
-  //color: $mainPurple;
-  font-size: 1.33em;
-  font-weight: $bold;
+  color: $etre-grey;
+  font-weight: $semiBold;
+  font-size: 1.12em;
 }
 
 h6 {
-  //color: $secondPink;
-  font-size: 1.2em;
+  color: $etre-grey;
+  font-weight: $semiBold;
+  font-size: 1em;
 }
 
 a {
-  //color: $etre-blue-light;
+  color: $etre-blue-light;
   text-decoration: underline;
 }
 
 a:visited {
-  //color: $etre-blue;
+  color: $etre-blue;
 }
 
 hr {
