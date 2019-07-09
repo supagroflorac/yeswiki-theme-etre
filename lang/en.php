@@ -13,4 +13,6 @@ $translations = array(
     'send' => 'Send',
     'question' => 'A question ?',
     'news' => 'News',
+    'network' => 'A network in Europe',
+    'videolibrary' => 'Video library',
 );
